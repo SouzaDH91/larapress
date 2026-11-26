@@ -61,7 +61,7 @@ php artisan storage:link
 
 ## Roadmap
 
-A especificação técnica completa e o plano de desenvolvimento em fases estão documentados no arquivo [`SPEC_LARAVEL_CMS.md`](./SPEC_LARAVEL_CMS.md).
+A especificação técnica completa e o plano de desenvolvimento em fases estão documentados no arquivo [`SPEC_LARAVEL_CMS.md`](SPEC_LARAVEL_CMS.md).
 
 ## Licença
 
