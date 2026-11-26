@@ -1,0 +1,438 @@
+/**
+ * NovaPulse Theme - Modern, High-Performance Stylesheet for LaraPress CMS
+ * Version: 1.0.0
+ */
+
+:root {
+    --np-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --np-primary: #6366f1;
+    --np-primary-hover: #4f46e5;
+    --np-accent: #ec4899;
+    --np-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+    --np-gradient-subtle: linear-gradient(135deg, rgba(99,102,241,0.08) 0%, rgba(236,72,153,0.08) 100%);
+    
+    /* Light Theme (Default) */
+    --np-bg: #f8fafc;
+    --np-surface: #ffffff;
+    --np-surface-glass: rgba(255, 255, 255, 0.85);
+    --np-border: #e2e8f0;
+    --np-text: #0f172a;
+    --np-text-muted: #64748b;
+    --np-shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+    --np-shadow-md: 0 10px 25px -5px rgba(0,0,0,0.06), 0 8px 10px -6px rgba(0,0,0,0.04);
+    --np-shadow-lg: 0 20px 30px -10px rgba(99,102,241,0.15);
+}
+
+[data-theme="dark"] {
+    --np-bg: #0b0f19;
+    --np-surface: #131b2e;
+    --np-surface-glass: rgba(19, 27, 46, 0.85);
+    --np-border: #1e293b;
+    --np-text: #f1f5f9;
+    --np-text-muted: #94a3b8;
+    --np-shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+    --np-shadow-md: 0 10px 25px -5px rgba(0,0,0,0.5);
+    --np-shadow-lg: 0 20px 30px -10px rgba(99,102,241,0.25);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--np-font-sans);
+    background-color: var(--np-bg);
+    color: var(--np-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+}
+
+/* Reading Progress Bar */
+#reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: var(--np-gradient);
+    z-index: 1050;
+    transition: width 0.1s ease-out;
+}
+
+/* Glassmorphic Navbar */
+.np-navbar {
+    background: var(--np-surface-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--np-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.np-navbar .navbar {
+    padding: 0.45rem 0;
+}
+
+.np-brand {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--np-text) !important;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+/* Menu horizontal no Header */
+.np-navbar .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0.35rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.np-navbar .navbar-nav .nav-item {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.np-navbar .navbar-nav .nav-link {
+    color: var(--np-text-muted) !important;
+    font-weight: 600 !important;
+    font-size: 0.92rem !important;
+    padding: 0.5rem 0.85rem !important;
+    border-radius: 8px !important;
+    transition: all 0.2s ease !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+.np-navbar .navbar-nav .nav-link:hover,
+.np-navbar .navbar-nav .nav-link:focus,
+.np-navbar .navbar-nav .nav-link.active {
+    color: var(--np-primary) !important;
+    background: var(--np-gradient-subtle) !important;
+}
+
+/* Dropdown no Navbar */
+.np-navbar .navbar-nav .dropdown-menu {
+    background: var(--np-surface);
+    border: 1px solid var(--np-border);
+    border-radius: 12px;
+    box-shadow: var(--np-shadow-md);
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.np-navbar .navbar-nav .dropdown-item {
+    color: var(--np-text-muted);
+    font-size: 0.88rem;
+    font-weight: 500;
+    padding: 0.45rem 0.85rem;
+    border-radius: 6px;
+    transition: all 0.15s ease;
+}
+
+.np-navbar .navbar-nav .dropdown-item:hover {
+    color: var(--np-primary);
+    background: var(--np-gradient-subtle);
+}
+
+@media (max-width: 991.98px) {
+    .np-navbar .navbar-nav {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.25rem !important;
+        padding: 0.75rem 0 !important;
+    }
+    .np-navbar .navbar-nav .nav-item,
+    .np-navbar .navbar-nav .nav-link {
+        width: 100% !important;
+    }
+}
+
+/* Menu no Rodapé */
+.np-footer .navbar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.4rem !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+}
+
+.np-footer .navbar-nav .nav-link {
+    color: var(--np-text-muted) !important;
+    padding: 0.2rem 0 !important;
+    font-size: 0.9rem !important;
+    transition: color 0.2s ease !important;
+    text-decoration: none !important;
+}
+
+.np-footer .navbar-nav .nav-link:hover {
+    color: var(--np-primary) !important;
+    padding-left: 4px !important;
+}
+
+/* Theme Toggle Button */
+.np-theme-toggle {
+    background: var(--np-surface);
+    border: 1px solid var(--np-border);
+    color: var(--np-text);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.np-theme-toggle:hover {
+    transform: rotate(20deg) scale(1.05);
+    border-color: var(--np-primary);
+}
+
+/* Hero Section */
+.np-hero {
+    padding: 5rem 0 3.5rem;
+    background: var(--np-gradient-subtle);
+    border-bottom: 1px solid var(--np-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.np-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    border-radius: 9999px;
+    background: var(--np-surface);
+    border: 1px solid var(--np-border);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--np-primary);
+    margin-bottom: 1.5rem;
+    box-shadow: var(--np-shadow-sm);
+}
+
+.np-hero-title {
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+}
+
+.np-hero-subtitle {
+    color: var(--np-text-muted);
+    font-size: 1.2rem;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* Modern Post Cards */
+.np-card {
+    background: var(--np-surface);
+    border: 1px solid var(--np-border);
+    border-radius: 16px;
+    padding: 1.75rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: var(--np-shadow-sm);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.np-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--np-shadow-md);
+    border-color: rgba(99,102,241,0.3);
+}
+
+.np-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 0.75rem;
+}
+
+.np-card-title a {
+    color: var(--np-text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.np-card-title a:hover {
+    color: var(--np-primary);
+}
+
+.np-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.85rem;
+    color: var(--np-text-muted);
+    margin-bottom: 1rem;
+}
+
+.np-card-excerpt {
+    color: var(--np-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+.np-btn-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--np-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: gap 0.2s ease;
+}
+
+.np-btn-more:hover {
+    gap: 0.6rem;
+    color: var(--np-primary-hover);
+}
+
+/* Single Article */
+.np-article-header {
+    margin-bottom: 2.5rem;
+}
+
+.np-article-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.np-article-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--np-border);
+    color: var(--np-text-muted);
+    font-size: 0.92rem;
+}
+
+.np-content {
+    font-size: 1.12rem;
+    line-height: 1.85;
+    color: var(--np-text);
+}
+
+.np-content p {
+    margin-bottom: 1.5rem;
+}
+
+.np-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.np-content blockquote {
+    border-left: 4px solid var(--np-primary);
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--np-text-muted);
+    background: var(--np-gradient-subtle);
+    border-radius: 0 8px 8px 0;
+}
+
+/* Comments Section */
+.np-comments {
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--np-border);
+}
+
+.np-comment-box {
+    background: var(--np-surface);
+    border: 1px solid var(--np-border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+/* Sidebar Widgets */
+.np-widget {
+    background: var(--np-surface);
+    border: 1px solid var(--np-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.75rem;
+    box-shadow: var(--np-shadow-sm);
+}
+
+.np-widget-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--np-primary);
+    display: inline-block;
+}
+
+/* Footer */
+.np-footer {
+    background: var(--np-surface);
+    border-top: 1px solid var(--np-border);
+    padding: 4rem 0 2rem;
+    margin-top: 6rem;
+    color: var(--np-text-muted);
+    font-size: 0.92rem;
+}
+
+/* Scroll To Top */
+.np-scroll-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--np-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--np-shadow-lg);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 900;
+}
+
+.np-scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.np-scroll-top:hover {
+    transform: translateY(-3px);
+    background: var(--np-primary-hover);
+}

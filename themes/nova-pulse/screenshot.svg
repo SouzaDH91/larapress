@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.02)" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg)" />
+  
+  <!-- Subtle glowing orb -->
+  <circle cx="680" cy="120" r="180" fill="#6366f1" opacity="0.15" filter="blur(40px)" />
+  <circle cx="120" cy="380" r="160" fill="#ec4899" opacity="0.12" filter="blur(40px)" />
+
+  <!-- Navbar mockup -->
+  <rect x="40" y="30" width="720" height="56" rx="16" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" />
+  <circle cx="70" cy="58" r="12" fill="url(#primaryGrad)" />
+  <text x="92" y="64" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="700" font-size="16">NovaPulse</text>
+  <rect x="480" y="50" width="60" height="16" rx="8" fill="rgba(255,255,255,0.15)" />
+  <rect x="560" y="50" width="60" height="16" rx="8" fill="rgba(255,255,255,0.15)" />
+  <rect x="640" y="44" width="90" height="28" rx="14" fill="url(#primaryGrad)" />
+  <text x="660" y="63" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="600" font-size="11">Explorar</text>
+
+  <!-- Hero text mockup -->
+  <text x="60" y="150" fill="url(#primaryGrad)" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="34">Design Futurista &amp; Veloz</text>
+  <text x="60" y="185" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15">Tema moderno com arquitetura modular, dark/light mode e CSS limpo.</text>
+
+  <!-- Card 1 -->
+  <rect x="60" y="225" width="310" height="230" rx="20" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.12)" />
+  <rect x="80" y="245" width="270" height="110" rx="12" fill="rgba(99,102,241,0.2)" />
+  <text x="80" y="380" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="700" font-size="16">Arquitetura Reativa Blade</text>
+  <text x="80" y="405" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12">Renderização ultra-rápida sem sobrecarga de compilação.</text>
+  <rect x="80" y="425" width="70" height="18" rx="9" fill="rgba(99,102,241,0.3)" />
+  <text x="92" y="438" fill="#a5b4fc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600">Laravel 13</text>
+
+  <!-- Card 2 -->
+  <rect x="395" y="225" width="345" height="230" rx="20" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.12)" />
+  <rect x="415" y="245" width="305" height="110" rx="12" fill="rgba(236,72,153,0.2)" />
+  <text x="415" y="380" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="700" font-size="16">Componentes Modulares &amp; Hooks</text>
+  <text x="415" y="405" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12">Totalmente integrado ao sistema de Menus e Widgets do LaraPress.</text>
+  <rect x="415" y="425" width="80" height="18" rx="9" fill="rgba(236,72,153,0.3)" />
+  <text x="427" y="438" fill="#f472b6" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600">Extensível</text>
+</svg>

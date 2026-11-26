@@ -1,0 +1,8 @@
+{
+    "name": "Hello LaraPress",
+    "slug": "hello-larapress",
+    "version": "1.0.0",
+    "description": "Plugin de demonstração do LaraPress CMS, demonstrando o uso de hooks (Actions & Filters), shortcodes e injeção dinâmica de menus na sidebar.",
+    "author": "LaraPress Core Team",
+    "provider": "Plugins\\HelloLaraPress\\HelloLaraPressServiceProvider"
+}

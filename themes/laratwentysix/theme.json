@@ -1,0 +1,15 @@
+{
+    "name": "LaraTwentySix",
+    "slug": "laratwentysix",
+    "version": "1.0.0",
+    "description": "Tema padrão moderno e veloz em Blade para o LaraPress CMS.",
+    "author": "LaraPress Core Team",
+    "menus": {
+        "header": "Menu do Topo",
+        "footer": "Menu do Rodapé"
+    },
+    "sidebars": {
+        "sidebar-1": "Barra Lateral Principal",
+        "footer-1": "Rodapé Coluna 1"
+    }
+}

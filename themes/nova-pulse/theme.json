@@ -1,0 +1,15 @@
+{
+    "name": "NovaPulse",
+    "slug": "nova-pulse",
+    "version": "1.0.0",
+    "description": "Um tema de última geração com design dark/light mode, tipografia limpa, gradientes futuristas e máxima velocidade.",
+    "author": "LaraPress Studio",
+    "menus": {
+        "header": "Menu de Navegação Principal",
+        "footer": "Links do Rodapé"
+    },
+    "sidebars": {
+        "sidebar-1": "Barra Lateral do Blog",
+        "footer-1": "Rodapé Informativo"
+    }
+}
